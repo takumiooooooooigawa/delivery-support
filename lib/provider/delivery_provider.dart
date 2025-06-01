@@ -41,6 +41,23 @@ final debug_delivery = const Delivery(
     image_key: "debug_image_key");
 final debug_deliverys = Deliverys(deliverys: [debug_delivery]);
 
+final debug_delivery2 = const Delivery(
+    from: const ShippingInfo(
+      user: const User(
+        name: const Name(),
+        tel_number: "",
+      ),
+      locate: const Locate(),
+    ),
+    to: const ShippingInfo(
+      user: const User(
+        name: const Name(),
+        tel_number: "",
+      ),
+      locate: const Locate(),
+    ),
+    image_key: "empty_data");
+
 final deliverysStateNotifierProvider =
     StateNotifierProvider<DeliverysProvider, Deliverys>((ref) {
   // 初期値設定したい場合(デバッグ用)
